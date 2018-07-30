@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Game Tournaments</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/show.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark head-back-color fixed-top">
+      <div class="container">
+        <img class="navbar-brand" width="50" height="50" src="tomak.jpg" alt="logo">
+        <a class="navbar-brand" href="#">Tomak</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="show.html">Browse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="create.html">Create</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Log in/out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container main-back-color">
+
+      <div class="row">
+
+        <div class="col-lg-3">
+          <h1 class="my-4"></h1>
+          <div class="list-group">
+            <a href="#" class="list-group-item">League of Legend</a>
+            <a href="#" class="list-group-item">Battle Grounds</a>
+            <a href="#" class="list-group-item">OverWatch</a>
+            <a href="#" class="list-group-item">FIFA Online</a>
+            <a href="#" class="list-group-item">Hearthstone</a>
+            <a href="#" class="list-group-item">Fornite</a>
+          </div>
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+          <div class="card mt-4">
+            <img class="card-img-top img-fluid2" width="900" height="500" src="https://dotesports-cdn-prod-tqgiyve.stackpathdns.com/thumbor/TJ-OjuwVw6yoRh2xibYqDRHxxSI=/1920x0/filters:no_upscale()/https://do8lg3dthpu1x.cloudfront.net/article/dea1d199-2d7b-4066-8944-450ea71ef40d.jpg" alt="">
+            <div class="card-body item-back-color">
+              <h3 class="card-title">대회명</h3>
+              <h4>대회 총 상금</h4>
+              <p class="card-text">일정 / 장소</p>
+              <span class="text-warning">주최자</span>
+            </div>
+          </div>
+          <!-- /.card -->
+
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header item-back-color">
+              <div class="tab">
+                <button id="defaultOpen" class="tablinks" onclick="openTab(event, 'tab-details')">세부사항</button>
+                <button class="tablinks" onclick="openTab(event, 'tab-participant')">참가자</button>
+                <button class="tablinks" onclick="openTab(event, 'tab-tournament')">대진표</button>
+                <button class="tablinks" onclick="openTab(event, 'tab-gameresult')">게임결과</button>
+                <!-- <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button> -->
+              </div>
+              <!-- <p class="details">Details</p> -->
+            </div>
+
+            <div id="tab-details" class="card-body item-back-color tabcontent">
+              <p class="prize">각 등수별 상금 규정</p>
+              <p class="content-prize">
+                FIRST PLACE<br>2000 RP up to 3200 RP, Ryze, Triumphant Ryze, 4-Win XP Boost<br>
+                SECOND PLACE<br>1600 RP up to 2400RP, 4-Win XP Boost<br>
+                THIRD PLACE<br>1200 RP up to 1600RP, 4-Win XP Boost<br>
+                FOURTH PLACE<br>800 RP up to 800RP, 4-Win XP Boost
+              </p>
+              <small class="text-muted"></small>
+              <hr>
+              <p class="rules">대회 규칙</p>
+              <p>
+                <ul class="content-rules">
+                  <li>Every team have 30 mins before the tournament to check in</li>
+                  <li>Every team can have infinity players in team roster</li>
+                  <li>No Level, Champions Limit</li>
+                  <li>Game must start in 15 minutes (20 first round) from the time your match is ready</li>
+                  <li>If you are room caiptain you can't kick players</li>
+                </ul>
+              </p>
+              <small class="text-muted"></small>
+              <hr>
+              <p class="type">게임 방식</p>
+              <p class="content-type">5v5</p>
+              <small class="text-muted"></small>
+              <hr>
+              <a href="#" class="btn btn-success">Enrollment</a>
+            </div>
+
+            <div id="tab-tournament" class="tabcontent item-back-color">
+              <div class="match">
+                <div class="round-one round">
+                  <div class="round-details">
+                    <span>Round1</span>
+                    <br>
+                    <span>시간</span>
+                  </div>
+                  <ul class="matchup">
+                    <li class="team team-top">team A</li>
+                    <li class="team team-bot">team B</li>
+                  </ul>
+                  <ul class="matchup">
+                    <li class="team team-top">team C</li>
+                    <li class="team team-bot">team D</li>
+                  </ul>
+                  <ul class="matchup">
+                    <li class="team team-top">team E</li>
+                    <li class="team team-bot">team F</li>
+                  </ul>
+                  <ul class="matchup">
+                    <li class="team team-top">team G</li>
+                    <li class="team team-bot">team H</li>
+                  </ul>
+                </div>
+
+                <div class="round-two round">
+                  <div class="round-details">
+                    <span>Round2</span>
+                    <br>
+                    <span>시간</span>
+                  </div>
+                  <ul class="matchup">
+                    <li class="team team-top"></li>
+                    <li class="team team-bot"></li>
+                  </ul>
+                  <ul class="matchup">
+                    <li class="team team-top"></li>
+                    <li class="team team-bot"></li>
+                  </ul>
+                </div>
+
+                <div class="round-three round">
+                  <div class="round-details">
+                    <span>Round3</span>
+                    <br>
+                    <span>시간</span>
+                  </div>
+                  <ul class="matchup">
+                    <li class="team team-top"></li>
+                    <li class="team team-bot"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div id="tab-participant" class="tabcontent tabcontent2 item-back-color">
+              <table width="700"height="700">
+                <!-- <thead>
+                  <h3>참가자 리스트</h3>
+                </thead> -->
+                <tbody>
+                  <tr>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant1</h4>
+                    </td>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant2</h4>
+                    </td>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant3</h4>
+                    </td>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant1</h4>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant1</h4>
+                    </td>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant4</h4>
+                    </td>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant5</h4>
+                    </td>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant6</h4>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant1</h4>
+                    </td>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant7</h4>
+                    </td>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant8</h4>
+                    </td>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant9</h4>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant10</h4>
+                    </td>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant11</h4>
+                    </td>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant12</h4>
+                    </td>
+                    <td>
+                      <img class="rounded-circle" src="http://placehold.it/100x100" alt="">
+                      <h4>participant1</h4>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div id="tab-gameresult" class="tabcontent item-back-color">
+
+            </div>
+
+          </div>
+          <!-- /.card -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 head-back-color">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+    function openTab(evt, tabName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    document.getElementById("defaultOpen").click();
+    </script>
+
+  </body>
+
+</html>

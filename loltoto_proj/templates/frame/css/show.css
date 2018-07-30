@@ -1,0 +1,185 @@
+/*!
+ * Start Bootstrap - Shop Item (https://startbootstrap.com/template-overviews/shop-item)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-item/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+  background-color: #151b27;
+  color: rgba(255,255,255,.5);
+}
+
+a{
+  color: white;
+}
+a:hover{
+  color: white;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+/* tab기능 */
+.tab {
+    overflow: hidden;
+    /* border: 1px solid #ccc; */
+    background-color: #1b222c;
+
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    color: white;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #1b222c;
+    color: rgba(255,255,255,.5);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #1b222c;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+/* Style the close button */
+.topright {
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+.topright:hover {color: red;}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+/* 대진표 */
+.match{
+  display: flex;
+  flex-direction: row;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.round-details{
+  font-size: 13px;
+  color: #2C7399;
+  text-transform: uppercase;
+  text-align: center;
+  height: 40px;
+}
+
+.round{
+  float:left;
+  display: flex;
+  flex-direction: column;
+  margin: 0 2.5% 0 0;
+  width: 140px;
+}
+
+.round-one .matchup{
+  padding: 20px 0px;
+}
+
+.round-two .matchup{
+  padding: 90px 0px;
+}
+
+.round-three .matchup{
+  padding: 210px 0px;
+}
+
+.matchup {
+    margin: 0;
+    width: 100%;
+    padding: 10px 0;
+    /* height: 60px; */
+    transition: all 0.2s;
+  }
+
+.team {
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 25px;
+    border: 1px solid black;
+    padding: 0 15px;
+    margin: 3px 0;
+    height: 40px;
+    line-height: 25px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    color: rgba(255,255,255,.5);
+    background-color: #282f3f;
+  }
+
+  ul{
+    display: block;
+    list-style-type: disc;
+  }
+
+  .image-fluid-2{
+    max-width: 100%;
+  }
+  .head-back-color{
+    background-color: #282f3f;
+  }
+
+  .item-back-color{
+    background-color: #1b222c;
+  }
+
+  .list-group-item{
+    position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    border: 1px solid rgba(0,0,0,125);
+    background-color: #282f3f;
+    color: rgba(255,255,255,.5);
+  }
+
+  .type, .prize, .rules{
+    font-size:7pt;
+  }
+  .content-type, .content-prize, .content-rules, .details{
+    color:white;
+    font-size: 13pt;
+  }
+
+  .tabcontent2{
+    padding: 10px 60px;
+  }
