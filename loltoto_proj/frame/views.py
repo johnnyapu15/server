@@ -10,24 +10,26 @@ from .models import *
 
 def index(request):
     template = loader.get_template('frame/index.html')
+    # tournaments = Tournament.objects.all()
     context = {
         'latest_question_list': 'www',
+        # 'tournaments':tournaments,
     }
-    return HttpResponse(template.render(context, request)) 
+    return HttpResponse(template.render(context, request))
 
 def show(request):
     template = loader.get_template('frame/show.html')
     context = {
         'latest_question_list': 'www',
     }
-    return HttpResponse(template.render(context, request)) 
+    return HttpResponse(template.render(context, request))
 
 def create(request):
     template = loader.get_template('frame/create.html')
     context = {
         'latest_question_list': 'www',
     }
-    return HttpResponse(template.render(context, request)) 
+    return HttpResponse(template.render(context, request))
 
 # 토너먼트 리스트 출력. 기본 페이지.
 def tournament_list(request):
@@ -46,13 +48,13 @@ def tournament_list(request):
 ## get url: /produce?producer=PRODUCER_NAME
 ## 클라이언트와 연계해서 json으로 바꿔야 함
 def tournament_produce(request):
-    
+
     prod = request.GET['producer']
     prod_obj = Producer.objects.filter(producer_addr=prod)
     if prod_obj.count() == 0:
         # 새로 생성
         Producer.objects.create(producer_addr=prod)
-    
+
     nonce = prod_obj.get(producer_addr=prod).nonce + 1
     prod_obj.update(nonce = nonce)
     tournament_code = str(request.build_absolute_uri(request.path)) + str(prod) +'/' + str(nonce)
