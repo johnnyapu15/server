@@ -172,9 +172,24 @@ a:hover{
     color: rgba(255,255,255,.5);
   }
 
-  .type, .prize, .rules{
+  .enrollment{
+    margin-top: 70px;
+    padding: 20px 10px;
+    /* border: 1px solid white; */
+    border-radius: .25rem;
+  }
+
+  .enrollment input{
+    width: 200px;
+    background-color: #1b222c;
+    border:#1b222c;
+    color: rgba(255,255,255,.5);
+  }
+
+  /* .type, .prize, .rules{
     font-size:7pt;
   }
+
   .content-type, .content-prize, .content-rules, .details{
     color:white;
     font-size: 13pt;
@@ -182,4 +197,4 @@ a:hover{
 
   .tabcontent2{
     padding: 10px 60px;
-  }
+  } */
