@@ -1,56 +1,7 @@
+{% extends "frame/layout.html" %}
 {% load static %}
-<!DOCTYPE html>
 
-<html lang="en">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Game Tournaments</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="{% static 'frame/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="{% static 'frame/css/index.css' %}" rel="stylesheet">
-
-  </head>
-
-  <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark head-back-color fixed-top">
-      <div class="container">
-        <img class="navbar-brand" width="50" height="50" src="{% static 'frame/picture/tomak.jpg' %}" alt="logo">
-        <a class="navbar-brand" href="index">Tomak</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="show">Browse</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="create">Create</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Log in/out</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
+{% block content %}
     <!-- Page Content -->
     <div class="container main-back-color">
 
@@ -101,103 +52,8 @@
             </a>
           </div>
 
-          <div class="row">
+          <div class="row" id="jja">
 
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100 item-back-color">
-                <a href="#"><img class="card-img-top" width="300" height="200" src="https://www.neoanime.co.kr/files/attach/images/111/883/974/006/e106eb41b25f7e5e2114846f233e0c8c.jpg" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">대회명</a>
-                  </h4>
-                  <h5>총 상금</h5>
-                  <p class="card-text">일자 및 장소</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">주최자</small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100 item-back-color">
-                <a href="#"><img class="card-img-top" width="300" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeimpccVTpwGebnjljALEZrM5p126cCkXw8rEJax4SvjBg7NXG" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">대회명</a>
-                  </h4>
-                  <h5>총 상금</h5>
-                  <p class="card-text">일자 및 장소</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">주최자</small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100 item-back-color">
-                <a href="#"><img class="card-img-top" width="300" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZbpr7evaqnnXO5u7qEYdBOqFvkQZrkSQGN1x-Hv_5H9zKo5pr" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">대회명</a>
-                  </h4>
-                  <h5>총 상금</h5>
-                  <p class="card-text">일자 및 장소</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">주최자</small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100 item-back-color">
-                <a href="#"><img class="card-img-top" width="300" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG7o6Ys799z28RT5rof2a1Kz68KH7WeHMsIZ3twOfDvEVEHQnp" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">대회명</a>
-                  </h4>
-                  <h5>총 상금</h5>
-                  <p class="card-text">일자 및 장소</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">주최자</small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100 item-back-color">
-                <a href="#"><img class="card-img-top" width="300" height="200" src="http://www.leagueoflegends.co.kr/upload/EditorImages/20170615185335_KWu1vdSV.jpg" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">대회명</a>
-                  </h4>
-                  <h5>총 상금</h5>
-                  <p class="card-text">일자 및 장소</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">주최자</small>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100 item-back-color">
-                <a href="#"><img class="card-img-top" width="300" height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7lBhv2sO3Flo_UYoqz0l9GgeqsmV5D97F3otqKsOOQL3BJGC1JQ" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="#">대회명</a>
-                  </h4>
-                  <h5>총 상금</h5>
-                  <p class="card-text">일자 및 장소</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">주최자</small>
-                </div>
-              </div>
-            </div>
 
           </div>
           <!-- /.row -->
@@ -209,20 +65,58 @@
       <!-- /.row -->
 
     </div>
-    <!-- /.container -->
 
-    <!-- Footer -->
-    <footer class="py-5 head-back-color">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+    <script>
+        var str1 = '<div class="col-lg-4 col-md-6 mb-4">\
+          <div class="card h-100 item-back-color">\
+            <a href="#">\
+              <img class="card-img-top" width="300" height="200"  src="'
+        var str2 = '" alt="">\
+            </a>\
+            <div class="card-body">\
+              <h4 class="card-title">\
+                <p class="tournament_name">이름:</p>\
+              </h4>\
+              <span>총상금 : </span><span class="tournament_total_prize"></span><br>\
+              <span>일자 : </span><span class="tournament_date card-text"></span><br>\
+              <span>장소 : </span><span class="tournament_place card-text"></span><br>\
+            <div class="card-footer">\
+              <small class="tournament_host text-muted"></small>\
+            </div>\
+          </div>\
+        </div>'
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        var title, prize, place, date, host, i, obj;
+        obj = {"tournaments":[
+          { "title":"대회명", "host":"호스트1", "date":"경기일자", "place":"경기장소", "prize":"우승상금", "banner":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7lBhv2sO3Flo_UYoqz0l9GgeqsmV5D97F3otqKsOOQL3BJGC1JQ" },
+          { "title":"대회명1", "host":"호스트2", "date":"경기일자", "place":"경기장소", "prize":"우승상금", "banner":"https://www.neoanime.co.kr/files/attach/images/111/883/974/006/e106eb41b25f7e5e2114846f233e0c8c.jpg" },
+          { "title":"대회명2", "host":"호스트3", "date":"경기일자", "place":"경기장소", "prize":"우승상금", "banner":"http://www.leagueoflegends.co.kr/upload/EditorImages/20170615185335_KWu1vdSV.jpg" },
+          { "title":"대회명3", "host":"호스트4", "date":"경기일자", "place":"경기장소", "prize":"우승상금","banner":"https://www.neoanime.co.kr/files/attach/images/111/883/974/006/e106eb41b25f7e5e2114846f233e0c8c.jpg" },
+          { "title":"대회명", "host":"호스트5", "date":"경기일자", "place":"경기장소", "prize":"우승상금", "banner":"https://www.neoanime.co.kr/files/attach/images/111/883/974/006/e106eb41b25f7e5e2114846f233e0c8c.jpg" },
+          { "title":"대회명", "host":"호스트6", "date":"경기일자", "place":"경기장소", "prize":"우승상금", "banner":"https://www.neoanime.co.kr/files/attach/images/111/883/974/006/e106eb41b25f7e5e2114846f233e0c8c.jpg" },
+        ]};
 
-  </body>
+        for (i = 0; i < obj.tournaments.length; i++){
 
-</html>
+          document.getElementById("jja").innerHTML += str1 + obj.tournaments[i].banner + str2;
+
+        }
+
+        title = document.querySelectorAll(".tournament_name");
+        prize = document.querySelectorAll(".tournament_total_prize");
+        place = document.querySelectorAll(".tournament_place");
+        date = document.querySelectorAll(".tournament_date");
+        host = document.querySelectorAll(".tournament_host");
+
+        //dict = [".tournament_name", ".tournament_total_prize", ".tournament_place", ".tournament_date", ".tournament_host"];
+        for (i = 0; i < obj.tournaments.length; i++){
+
+          title[i].innerHTML = obj.tournaments[i].title;
+          prize[i].innerHTML = obj.tournaments[i].prize;
+          date[i].innerHTML = obj.tournaments[i].date;
+          place[i].innerHTML = obj.tournaments[i].place;
+          host[i].innerHTML = obj.tournaments[i].host;
+        }
+
+    </script>
+{% endblock %}

@@ -1,53 +1,7 @@
+{% extends "frame/layout.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
 
-<title>create</title>
-
-<!-- Bootstrap core CSS -->
-<link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-
-<!-- Custom styles for this template -->
-<link href="{% static 'css/create.css' %}" rel="stylesheet">
-<link href="{% static 'css/index.css' %}" rel="stylesheet">
-
-</head>
-
-<body>
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark head-back-color fixed-top">
-    <div class="container">
-      <img class="navbar-brand" width="50" height="50" src="tomak.jpg" alt="logo">
-      <a class="navbar-brand" href="#">Tomak</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home
-              <!-- <span class="sr-only">(current)</span> -->
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="show.html">Browse</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Create</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Log in/out</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+{% block content %}
   <!-- Page Content -->
   <div class="container main-back-color">
 
@@ -70,79 +24,52 @@
           <h2>필수 기입사항</h2>
           <div class="dropdown">
             <p class="create-content">게임 종류</p>
-            <button width="200px" onclick="myFunction()" class="dropbtn">Select Game</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#">League of Legend</a>
-              <a href="#">Battle Grounds</a>
-              <a href="#">OverWatch</a>
-              <a href="#">FIFA Online</a>
-              <a href="#">Hearthstone</a>
-              <a href="#">Fornite</a>
-            </div>
+            <form action="">
+              <select name="gametype" id="gametype">
+                <option value="LeagueofLegends">League of Legend</option>
+                <option value="BattleGrounds">Battle Grounds</option>
+                <option value="OverWatch">OverWatch</option>
+                <option value="FIFA">FIFA Online</option>
+                <option value="Hearthstone">Hearthstone</option>
+                <option value="Fortnite">Fortnite</option>
+              </select>
+            </form>
           </div>
           <br><br>
-          <form action="/action_page.php">
-            <input type="text" name="fname" value="토너먼트 이름"><br>
-          </form>
-          <form action="">
-            <br>
+          <form action="" method="Post">
+            {% csrf_token %}
+            <input id="title" type="text" name="fname" value="토너먼트 이름"><br><br>
             <p class="create-content">시작일</p>
-            <input type="date" placeholder="내용"><br><br>
-          </form>
+            <input id="date" type="date"><br><br>
+            <p class="create-content">장소</p>
+            <input id="place" type="text" placeholder="대회장소"><br><br>
 
-          <form action="" method="post">
-              <div width="200px">
-                <p class="create-content">게임 방식</p>
-                <input class="input-radio" type="radio" name="radio" id="radio">
-                <label for="radio">5 vs 5</label>
-                <input class="input-radio" type="radio" name="radio" id="radio">
-                <label for="radio">3 vs 3</label>
-              </fieldset>
-            </form>
+            <div width="200px">
+              <p class="create-content">게임 방식</p>
+              <input class="input-radio" type="radio" name="radio" id="radio">
+              <label for="radio">5 vs 5</label>
+              <input class="input-radio" type="radio" name="radio" id="radio">
+              <label for="radio">3 vs 3</label>
+            </div>
 
-          <form action="/action_page.php">
             <p class="create-content">Contact</p>
-            <input type="email" name="" value="tournament@gamil.com"><br>
-          </form>
+            <input type="email" name="contact" value="tournament@gmail.com"><br><br>
 
-          <!-- <form action="">
-            <input class="btn btn-success" type="submit" value="Create">
-          </form> -->
-
-        </div>
-
-
-      <div class="row">
-        <div class="card-body item-back-color">
-          <h2>선택 기입사항</h2>
-          <form action="">
             <p class="create-content">상금</p>
-            <textarea name="" id="" cols="30" rows="5"></textarea>
-          </form>
-          <form action="">
+            <textarea name="" id="prize" cols="30" rows="5"></textarea>
+
             <p class="create-content">Rules</p>
-            <textarea name="" id="" cols="30" rows="5"></textarea>
+            <textarea name="" id="rules" cols="30" rows="5"></textarea>
+            <br><br>
+
+            <input id="create" class="btn btn-success" type="submit" value= "Create">
           </form>
-          <form action="">
-            <p class="create-content">배너</p>
-            <input type="file" accept="image/*"><br><br>
-            <input class="btn btn-success" type="submit" value="Create">
-          </form>
+          <!-- <strong> :: 출력결과 :: </strong><br><br>
+          <div id="result"></div> -->
         </div>
-
-      </div>
-
-    </div>
-
     </div>
   </div>
 </div>
-  <footer class="py-5 head-back-color">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-    </div>
-    <!-- /.container -->
-  </footer>
 
   <script>
   /* When the user clicks on the button,
@@ -166,7 +93,33 @@
     }
   }
   </script>
-      <!-- /.col-lg-3 -->
 
-</body>
-</html>
+  <script>
+
+      $("#create").click(function(){
+
+      // 배열을 선언한다.
+        var dataArr = new Array();
+
+
+      // 객체 생성
+        var dataObj = new Object();
+
+      // 객체에 input 값을 담는다.
+        dataObj.gametype = $("#gametype").val();
+        dataObj.title = $("#title").val();
+        dataObj.place = $("#place").val();
+        dataObj.howtoplay = $("#radio").val();
+        dataObj.contact = $("#contact").val();
+        dataObj.prize = $("#prize").val();
+        dataObj.rules = $("#rules").val();
+
+      // 배열 생성된 객체 삽입
+        dataArr.push(dataObj) ;
+
+      // json 형태의 문자열로 만든다.
+        var jsonData = JSON.stringify(dataArr);
+        // $("#result").html(jsonData);
+      });
+  </script>
+{% endblock %}

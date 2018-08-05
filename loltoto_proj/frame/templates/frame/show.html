@@ -1,54 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "frame/layout.html" %}
+{% load static %}
 
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Game Tournaments</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/show.css" rel="stylesheet">
-
-  </head>
-
-  <body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark head-back-color fixed-top">
-      <div class="container">
-        <img class="navbar-brand" width="50" height="50" src="tomak.jpg" alt="logo">
-        <a class="navbar-brand" href="#">Tomak</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="show.html">Browse</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="create.html">Create</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Log in/out</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
+{% block content %}
     <!-- Page Content -->
     <div class="container main-back-color">
 
@@ -64,6 +17,51 @@
             <a href="#" class="list-group-item">Hearthstone</a>
             <a href="#" class="list-group-item">Fornite</a>
           </div>
+
+          <div class="enrollment head-back-color" style="
+              margin-top: 70px;
+              padding: 20px 10px;
+              border-radius: .25rem;
+          ">
+            <p>토너먼트 참여하기</p><hr color="#1b222c">
+            <form action="">
+              <label for="teamid">team name : </label>
+              <input type="text" id="teamid" style="
+    border-bottom: rgba(255,255,255,.5);
+">
+            </form>
+            <hr color="#1b222c"><p>선수 명단</p>
+            <form action="">
+              <label for="gameid1">summon name1 : </label>
+              <input class="gameid" type="text" id="gameid1" style="
+    border-bottom: rgba(255,255,255,.5);
+">
+
+              <label for="gameid2">summon name2 : </label>
+              <input class="gameid" type="text" id="gameid2" style="
+    border-bottom: rgba(255,255,255,.5);
+">
+
+              <label for="gameid3">summon name3 : </label>
+              <input class="gameid" type="text" id="gameid3" style="
+    border-bottom: rgba(255,255,255,.5);
+">
+
+              <label for="gameid4">summon name4 : </label>
+              <input class="gameid" type="text" id="gameid4" style="
+    border-bottom: rgba(255,255,255,.5);
+">
+
+              <label for="gameid5">summon name5 : </label>
+              <input class="gameid" type="text" id="gameid5" style="
+    border-bottom: rgba(255,255,255,.5);
+">
+            </form>
+            <br>
+            <button id="enrollment" class="btn btn-success">Enrollment</button>
+          </div>
+          <!-- <strong> :: 출력결과 :: </strong><br><br>
+          <div id="result"></div> -->
         </div>
         <!-- /.col-lg-3 -->
 
@@ -274,16 +272,9 @@
     </div>
     <!-- /.container -->
 
-    <!-- Footer -->
-    <footer class="py-5 head-back-color">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-      </div>
-      <!-- /.container -->
-    </footer>
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
     <script>
     function openTab(evt, tabName) {
       // Declare all variables
@@ -308,6 +299,33 @@
     document.getElementById("defaultOpen").click();
     </script>
 
-  </body>
+    <script>
 
-</html>
+        $("#enrollment").click(function(){
+
+            // 배열을 선언한다.
+            var dataArr = new Array();
+
+
+                // 객체 생성
+                var dataObj = new Object();
+
+                // 객체에 input 값을 담는다.
+                dataObj.team_name = $("#teamid").val();
+                dataObj.summon_name1 = $("#gameid1").val();
+                dataObj.summon_name2 = $("#gameid2").val();
+                dataObj.summon_name3 = $("#gameid3").val();
+                dataObj.summon_name4 = $("#gameid4").val();
+                dataObj.summon_name5 = $("#gameid5").val();
+
+                // 배열 생성된 객체 삽입
+                dataArr.push(dataObj) ;
+
+            // json 형태의 문자열로 만든다.
+            var jsonData = JSON.stringify(dataArr);
+
+            // $("#result").html(jsonData);
+        });
+    </script>
+
+{% endblock %}
