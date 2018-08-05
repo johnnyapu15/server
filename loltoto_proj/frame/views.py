@@ -48,7 +48,11 @@ def tournament_list(request):
 ## get url: /produce?producer=PRODUCER_NAME
 ## 클라이언트와 연계해서 json으로 바꿔야 함
 def tournament_produce(request):
+    # USING_JSON
+    # json_obj = serializers.deserialize('json', request.body.decode('utf-8'))
     
+
+
     prod = request.GET['producer']
     prod_obj = Producer.objects.filter(producer_addr=prod)
     if prod_obj.count() == 0:
